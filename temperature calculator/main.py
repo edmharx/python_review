@@ -8,5 +8,15 @@
 
 
 num = float(input("Input the temperature to convert"))
+temp = input("Choose your conversion method")
 
-temp = input("Choose your conversion methood")
+def celsius_to_fahrenheit(to_convert_ct):
+    ans = to_convert_ct * (9/5) + 32
+    print (ans)
+
+def fahrenheit_to_celsius(to_convert_tc):
+    ans = (to_convert_tc - 32) * 5/9
+    print (ans)
+
+while True:
+    if temp == 1 or 2
