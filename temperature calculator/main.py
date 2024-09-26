@@ -6,3 +6,7 @@
 #give option to do another conversion
 #put in while loop
 
+
+num = float(input("Input the temperature to convert"))
+
+temp = input("Choose your conversion methood")
