@@ -15,6 +15,17 @@ def find_voltage(current, resistance):
     else:
         print("The value of voltage is ", ans)
 
+    global loop
+    while loop:
+        another = input ("Use the ohm's law calculator again?(Y/N): ")
+        if another.upper() == "Y":
+            break
+        elif another.upper() == "N":
+            loop = False
+        else:
+            print ("Please enter Y or N.")
+    return
+
 def find_current(voltage, resistance):
     ans = voltage/resistance
     if voltage == 0 and resistance == 0:
@@ -25,6 +36,17 @@ def find_current(voltage, resistance):
         print ("The value of current is ", ans,". Short circuit occurred")
     else:
         print("The value of voltage is ", ans)
+    
+    global loop
+    while loop:
+        another = input ("Use the ohm's law calculator again?(Y/N): ")
+        if another.upper() == "Y":
+            break
+        elif another.upper() == "N":
+            loop = False
+        else:
+            print ("Please enter Y or N.")
+    return
 
 def find_resistance(current, voltage):
     ans = voltage/current
@@ -36,29 +58,41 @@ def find_resistance(current, voltage):
         print ("The value of current is ", ans,". Short circuit occurred")
     else:
         print("The value of voltage is ", ans)
+    
+    global loop
+    while loop:
+        another = input ("Use the ohm's law calculator again?(Y/N): ")
+        if another.upper() == "Y":
+            break
+        elif another.upper() == "N":
+            loop = False
+        else:
+            print ("Please enter Y or N.")
+    return
+
+loop = True
+
+while loop:
+    print ("Welcome to ohm's law calculator\n\nChoose what value to find\n\n1. Voltage\n2. Current\n3. Resistance\n")
+    to_find = int(input("Select the corresponding number: "))
+
+    if to_find == 1:
+        current = float(input("Current: "))
+        resistance = float(input("Resistance: "))
+        find_voltage(current, resistance)
+
+    elif to_find == 2:
+        voltage = float(input("Voltage: "))
+        resistance = float(input("Resistance: "))
+        find_current(voltage, resistance)
+
+    elif to_find == 3:
+        current = float(input("Current: "))
+        voltage = float(input("Voltage: "))
+        find_resistance(current, voltage)
+
+    else:
+        print ("Type the corresponding number")
 
 
-print ("Welcome to ohm's law calculator\n\nChoose what value to find\n\n1. Voltage\n2. Current\n3. Resistance\n")
-to_find = int(input("Select the corresponding number"))
-
-if to_find == 1:
-    current = float(input("Current: "))
-    resistance = float(input("Resistance: "))
-    find_voltage(current, resistance)
-
-elif to_find == 2:
-    voltage = float(input("Voltage: "))
-    resistance = float(input("Resistance: "))
-    find_current(voltage, resistance)
-
-elif to_find == 3:
-    current = float(input("Current: "))
-    voltage = float(input("Voltage: "))
-    find_resistance(current, voltage)
-
-else:
-    print ("Type the corresponding number")
-
-
-#what if a value is zero
 
