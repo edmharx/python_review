@@ -10,22 +10,46 @@ def celsius_to_fahrenheit(to_convert_ct):
     ans = to_convert_ct * (9/5) + 32
     print ("The answer is ",ans)
 
+    global loop
+    while loop:
+        another = input ("Convert another temperature?(Y/N): ")
+        if another.upper() == "Y":
+            break
+        elif another.upper() == "N":
+            loop = False
+        else:
+            print ("Please enter Y or N.")
+    return
+
 
 
 def fahrenheit_to_celsius(to_convert_tc):
     ans = (to_convert_tc - 32) * 5/9
     print ("The answer is ",ans)
 
+    global loop
+    while loop:
+        another = input ("Convert another temperature?(Y/N): ")
+        if another.upper() == "Y":
+            break
+        elif another.upper() == "N":
+            loop = False
+        else:
+            print ("Please enter Y or N.")
+    return
 
-num = float(input("Input the temperature to convert: "))
-temp = int(input("Choose your conversion method: \n\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius\n\nType the number of your conversion method: "))
 
+loop = True
 
-if temp == 1 or temp == 2:
+while loop:
+
+    num = float(input("Input the temperature to convert: "))
+    temp = int(input("Choose your conversion method: \n\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius\n\nType the number of your conversion method: "))
+
     if temp == 1:
         celsius_to_fahrenheit(num)
     elif temp == 2:
         fahrenheit_to_celsius(num)
-else:
-    print ("Type the corresponding conversion method")
+    else:
+        print ("Type the corresponding conversion method")
 
