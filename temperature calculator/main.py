@@ -10,16 +10,16 @@ def celsius_to_fahrenheit(to_convert_ct):
     ans = to_convert_ct * (9/5) + 32
     print ("The answer is ",ans)
 
+
+
 def fahrenheit_to_celsius(to_convert_tc):
     ans = (to_convert_tc - 32) * 5/9
     print ("The answer is ",ans)
 
 
 num = float(input("Input the temperature to convert: "))
-temp = int(input("Choose your conversion method: "))
-print ()
-print ("1. Celsius to Fahrenheit")
-print ("2. Fahrenheit to Celsius")
+temp = int(input("Choose your conversion method: \n\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius\n\nType the number of your conversion method: "))
+
 
 if temp == 1 or temp == 2:
     if temp == 1:
