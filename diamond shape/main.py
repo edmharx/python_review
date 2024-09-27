@@ -12,6 +12,8 @@ def print_diamond(width):
         elif width < 0:
             print("Type positive odd integer")
         else:
-            for i in range(width):
-                print(' ' * (width - i - 1))
+            for i in range(width // 2 + 1):
+                print(' ' * (width // 2 - i),end = '')
                 print('*' * (2 * i + 1))
+
+print_diamond(width)
