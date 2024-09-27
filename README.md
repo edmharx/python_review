@@ -1,3 +1,7 @@
+### Submitted by: Edmharx Macasinag
+#### Data Structure and Algorithm Lab 1 | Python Review |
+#### BSCpE 2-2
+
 This repository contains  the collection of scripts written in Python as a reviewer, including a Temperature Calculator, an Ohm's Law Calculator, and a Diamond Shape Maker.
 
 ## Table of Contents
@@ -35,5 +39,4 @@ The Diamond Shape Maker creates a diamond shape based on the specified width. Th
 
 - **`print_diamond(width)`**: Prints a diamond shape with the given width.
 
-### Submitted by: Edmharx Macasinag
-### BSCpe 2-2
+
