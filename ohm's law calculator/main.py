@@ -6,15 +6,36 @@
 
 def find_voltage(current, resistance):
     ans = current * resistance
-    print("The value of voltage is ", ans)
+    if current == 0 and resistance == 0:
+        print ("The value of voltage is ", ans,". Circuit inactive")
+    elif current == 0:
+        print ("The value of voltage is ", ans,". Open cicuit")
+    elif resistance == 0:
+        print ("The value of voltage is ", ans,". Short circuit occurred")
+    else:
+        print("The value of voltage is ", ans)
 
 def find_current(voltage, resistance):
     ans = voltage/resistance
-    print("The value of voltage is ", ans)
+    if voltage == 0 and resistance == 0:
+        print ("The value of current is ", ans,". Undefined")
+    elif voltage == 0:
+        print ("The value of current is ", ans,". Open or inactive Circuit")
+    elif resistance == 0:
+        print ("The value of current is ", ans,". Short circuit occurred")
+    else:
+        print("The value of voltage is ", ans)
 
 def find_resistance(current, voltage):
     ans = voltage/current
-    print("The value of voltage is ", ans)
+    if voltage == 0 and current == 0:
+        print ("The value of current is ", ans,". Undefined")
+    elif current == 0:
+        print ("The value of current is ", ans,". Open Circuit")
+    elif voltage == 0:
+        print ("The value of current is ", ans,". Short circuit occurred")
+    else:
+        print("The value of voltage is ", ans)
 
 
 print ("Welcome to ohm's law calculator\n\nChoose what value to find\n\n1. Voltage\n2. Current\n3. Resistance\n")
@@ -35,8 +56,9 @@ elif to_find == 3:
     voltage = float(input("Voltage: "))
     find_resistance(current, voltage)
 
+else:
+    print ("Type the corresponding number")
 
 
-#not in the selection
 #what if a value is zero
 
