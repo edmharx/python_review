@@ -1,4 +1,4 @@
-This repository contains a collection of utility scripts written in Python, including a Temperature Calculator, an Ohm's Law Calculator, and a Diamond Shape Maker. Each script provides specific functionality, making it easy to perform various calculations and generate shapes.
+This repository contains  the collection of scripts written in Python as a reviewer, including a Temperature Calculator, an Ohm's Law Calculator, and a Diamond Shape Maker.
 
 ## Table of Contents
 
@@ -34,3 +34,6 @@ The Diamond Shape Maker creates a diamond shape based on the specified width. Th
 ### Functions
 
 - **`print_diamond(width)`**: Prints a diamond shape with the given width.
+
+### Submitted by: Edmharx Macasinag
+### BSCpe 2-2
